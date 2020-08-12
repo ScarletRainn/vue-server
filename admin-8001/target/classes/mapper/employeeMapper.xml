@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xiaoyu.springcloud.dao.EmployeeDao">
+
+    <resultMap id="resultEmployee" type="com.xiaoyu.springcloud.entities.Employee">
+        <id property="employeeId" column="id" javaType="INT"/>
+        <result property="employeeName" column="employee_name"/>
+        <result property="password" column="employee_password"/>
+        <result property="gender" column="gender"/>
+        <result property="departmentName" column="department_name"/>
+        <result property="departmentName" column="department_name"/>
+        <result property="admin" column="admin"/>
+    </resultMap>
+
+    <select id="queryAllEmployee" resultMap="resultEmployee">
+        select id as id, employee_name as employee_name, employee_password as employee_password,
+        gender as gender, department_name as department_name, admin as admin from employee
+    </select>
+
+    <insert id="insertEmployee" useGeneratedKeys="true" keyProperty="employeeInfo.employeeId">
+            insert into employee(employee_name,employee_password,gender,department_name,admin)values(#{employeeInfo.employeeName},
+            #{employeeInfo.password},#{employeeInfo.gender},#{employeeInfo.departmentName},#{employeeInfo.admin});
+    </insert>
+
+    <select id="queryEmployeeById" resultMap="resultEmployee">
+        select id as id, employee_name as employee_name, employee_password as employee_password,
+        gender as gender, department_name as department_name, admin as admin from employee where id = #{id}
+    </select>
+
+    <select id="queryEmployeeByName" resultMap="resultEmployee">
+        select id as id, employee_name as employee_name, employee_password as employee_password,
+        gender as gender, department_name as department_name, admin as admin from employee where employee_name = #{name}
+    </select>
+
+    <update id="updateEmployeeById">
+        update employee set employee_name = #{employeeInfo.employeeName}, employee_password = #{employeeInfo.password},
+        gender=#{employeeInfo.gender},department_name = #{employeeInfo.departmentName},admin= #{employeeInfo.admin} where id = #{employeeInfo.employeeId}
+    </update>
+
+    <delete id="deleteEmployeeById">
+        delete from employee where id = #{id}
+    </delete>
+</mapper>

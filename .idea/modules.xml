@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Feign-80/Feign-80.iml" filepath="$PROJECT_DIR$/Feign-80/Feign-80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway-9527/Gateway-9527.iml" filepath="$PROJECT_DIR$/Gateway-9527/Gateway-9527.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin-8001/admin-8001.iml" filepath="$PROJECT_DIR$/admin-8001/admin-8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin-nofeign-80/admin-feign-80.iml" filepath="$PROJECT_DIR$/admin-nofeign-80/admin-feign-80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-7001/eureka-7001.iml" filepath="$PROJECT_DIR$/eureka-7001/eureka-7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user.iml" filepath="$PROJECT_DIR$/user.iml" />
+    </modules>
+  </component>
+</project>
